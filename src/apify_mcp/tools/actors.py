@@ -10,14 +10,14 @@ from typing import Any
 from dedalus_mcp import HttpMethod, tool
 from dedalus_mcp.types import ToolAnnotations
 
-from apify.guards import (
+from apify_mcp.guards import (
     validate_actor_id,
     validate_limit,
     validate_offset,
     validate_run_id,
 )
-from apify.request import request
-from apify.types import JSONObject
+from apify_mcp.request import request
+from apify_mcp.types import JSONObject
 
 
 @tool(

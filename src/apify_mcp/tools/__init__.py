@@ -11,9 +11,9 @@ Modules:
 
 from __future__ import annotations
 
-from apify.tools.actors import actor_tools
-from apify.tools.datasets import dataset_tools
-from apify.tools.tasks import task_tools
+from apify_mcp.tools.actors import actor_tools
+from apify_mcp.tools.datasets import dataset_tools
+from apify_mcp.tools.tasks import task_tools
 
 apify_tools = [
     *actor_tools,

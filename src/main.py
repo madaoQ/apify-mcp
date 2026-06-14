@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 from dedalus_mcp import MCPServer
 from dedalus_mcp.server import TransportSecuritySettings
 
-from apify import create_apify_connection, apify_tools
+from apify_mcp import create_apify_connection, apify_tools
 
 load_dotenv()
 

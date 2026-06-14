@@ -8,9 +8,9 @@ from __future__ import annotations
 from dedalus_mcp import HttpMethod, tool
 from dedalus_mcp.types import ToolAnnotations
 
-from apify.guards import validate_limit, validate_offset
-from apify.request import request
-from apify.types import JSONObject
+from apify_mcp.guards import validate_limit, validate_offset
+from apify_mcp.request import request
+from apify_mcp.types import JSONObject
 
 
 @tool(

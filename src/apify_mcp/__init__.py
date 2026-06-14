@@ -9,7 +9,7 @@ Credentials provided by clients at runtime via DAuth token exchange.
 
 from __future__ import annotations
 
-from apify.config import create_apify_connection
-from apify.tools import apify_tools
+from apify_mcp.config import create_apify_connection
+from apify_mcp.tools import apify_tools
 
 __all__ = ["create_apify_connection", "apify_tools"]
