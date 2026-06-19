@@ -7,26 +7,32 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
-class ActorInfo(BaseModel, frozen=True, slots=True):
+class ActorInfo(BaseModel):
     """Actor info."""
+    model_config = _FROZEN_SLOT
+
 
     id: str | None = None
     name: str | None = None
     description: str | None = None
 
 
-class ActorList(BaseModel, frozen=True, slots=True):
+class ActorList(BaseModel):
     """List of actors."""
+    model_config = _FROZEN_SLOT
+
 
     data: list[ActorInfo] = Field(default_factory=list)
     total: int | None = None
 
 
-class RunInfo(BaseModel, frozen=True, slots=True):
+class RunInfo(BaseModel):
     """Actor run info."""
+    model_config = _FROZEN_SLOT
+
 
     id: str | None = None
     act_id: str | None = None
@@ -35,8 +41,10 @@ class RunInfo(BaseModel, frozen=True, slots=True):
     finished_at: str | None = None
 
 
-class DatasetItem(BaseModel, frozen=True, slots=True):
+class DatasetItem(BaseModel):
     """Dataset item."""
+    model_config = _FROZEN_SLOT
+
 
     # Dataset items are arbitrary JSON
     pass
